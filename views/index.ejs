@@ -1,0 +1,26 @@
+<%- include("partials/header.ejs") %>
+
+<div class="form-container"></div>
+  <div>
+     <h1 class="login-heading">Welcome to Connect</h1>
+     <p class="login-para">Don't have an account? <a href="/register" class="google-link">Sign up for free</a></p>
+     <div class="anchor-container"> 
+       <a href="/auth/google" role="button" class="google-link">
+             <i>Sign In with Google</i>
+        </a>
+     </div>
+     <!-- <hr> -->
+    <div class="local-login">
+       <!-- <div class="input-items"> -->
+        <form action="/login" method="POST">
+            <div class="input-items">
+                <input type="email" class="form-input" name="username" placeholder="Email">
+                <input type="password" class="form-input" name="password" placeholder="password">           
+                <button type="submit" class="btn ">Sign in</button>
+            </div>      
+        </form>
+    </div>
+   </div>
+</div>
+
+<%- include("partials/footer.ejs") %>
